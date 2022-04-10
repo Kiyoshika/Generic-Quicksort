@@ -49,7 +49,7 @@ int main()
     
     quicksort::sort<int>(integers);
     std::cout << "INTEGERS SORTED ASCENDING:\n";
-    for (int const& item : integers)
+    for (auto const& item : integers)
         std::cout << item << " ";
     
     quicksort::sort<std::string>(names);
@@ -68,4 +68,18 @@ int main()
         std::cout << item << " ";
     return 0;
 }
+```
+Output:
+```text
+INTEGERS SORTED ASCENDING:
+-5 -2 1 1 1 1 4 4 4 5 5 7 8 10
+
+NAMES SORTED ASCENDING:
+adam bob greg jim kyle
+
+NAMES SORTED DESCENDING:
+kyle jim greg bob adam
+
+POINTS SORTED ASCENDING:
+(1, 1) (2, 0) (2, 3) (4, 2) (1, 8)
 ```
